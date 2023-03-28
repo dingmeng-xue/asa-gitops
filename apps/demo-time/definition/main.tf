@@ -46,7 +46,7 @@ resource "azurerm_spring_cloud_configuration_service" "configservice" {
 resource "azurerm_spring_cloud_gateway" "scgateway" {
   name                    = "default"
   spring_cloud_service_id = azurerm_spring_cloud_service.demo-time-asa.id
-  instance_count          = 2
+  instance_count          = 3
 }
 
 resource "azurerm_spring_cloud_api_portal" "apiportal" {
