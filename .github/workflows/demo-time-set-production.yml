@@ -10,6 +10,7 @@ on:
   push: 
     paths:
       - apps/demo-time/deployments/production
+    
 jobs:
   Azure_Spring_Apps_Demo:
     runs-on: ubuntu-latest
