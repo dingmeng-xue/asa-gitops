@@ -1,4 +1,4 @@
-name: Deploy Demo Time Blue
+name: Demo Time Set production
 
 env:
   SERVICE_NAME: demo-time-asa
