@@ -12,15 +12,14 @@ on:
     paths:
       - 'apps/demo-time/deployments/blue'
 
-#Special permissions required for OIDC authentication
-permissions:
-  id-token: write
-  contents: read
-  package: read
-
 jobs:
   Azure_Spring_Apps_Demo:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: read
+      id-token: write
+
     steps:
       - name: Checkout Github Action
         uses: actions/checkout@master
