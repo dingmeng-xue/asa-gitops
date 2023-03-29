@@ -1,7 +1,7 @@
-name: Deploy Demo Time Blue
+name: Deploy Demo Time Green
 
 env:
-  DEPLOYMENT_NAME: blue
+  DEPLOYMENT_NAME: green
   SERVICE_NAME: demo-time-asa
   APP_NAME: demo-time
   RESOURCE_GROUP: ASA-E-GitOps
@@ -57,7 +57,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PAT }}
 
 
-      - name: Deploy to blue
+      - name: Deploy to green
         if: ${{ env.CURRENT_VERSION != env.APP_VERSION }}
         uses: Azure/spring-apps-deploy@v1
         with:
