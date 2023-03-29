@@ -38,7 +38,7 @@ jobs:
         run: |
           az extension add -n spring -y
           echo "CURRENT_PRODUCTION=$(az spring app show -n ${{ env.APP_NAME }} -s ${{ env.SERVICE_NAME }} -g ${{ env.RESOURCE_GROUP }} \
-           --subscription ${{ env.AZURE_SUBSCRIPTION }}  -o tsv --query properties.activeDeployment)"
+           --subscription ${{ env.AZURE_SUBSCRIPTION }}  -o tsv --query properties.activeDeployment.name)"
 
       - name: Set production to ${{ env.PRODUCTION_DEPLOYMENT }}
         if: ${{ env.CURRENT_PRODUCTION != env.PRODUCTION_DEPLOYMENT }}
