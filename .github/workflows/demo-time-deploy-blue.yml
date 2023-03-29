@@ -12,6 +12,12 @@ on:
     paths:
       - 'apps/demo-time/deployments/blue'
 
+#Special permissions required for OIDC authentication
+permissions:
+  id-token: write
+  contents: read
+  package: read
+
 jobs:
   Azure_Spring_Apps_Demo:
     runs-on: ubuntu-latest
